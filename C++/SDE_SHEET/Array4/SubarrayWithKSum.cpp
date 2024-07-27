@@ -15,15 +15,13 @@ int findCnt(vector<int> nums,int k)
         {
             len=i+1;
         }
-        else
+        else if(mp.find(sum-k)!=mp.end())
         {
-            if(mp.find(sum)!=mp.end())
-            {
-                len=max(len,(i-mp.at(sum)));
-            }
-            else
-            mp[sum]=i;
+            len=max(len,(i-mp.at(sum-k)));
         }
+        if(mp.find(sum)==mp.end())
+            mp[sum]=i;
+
     }
 
     return len;
@@ -32,5 +30,5 @@ int findCnt(vector<int> nums,int k)
 int main()
 {
     vector<int> nums={9, -3, 3, -1, 6, -5};
-    cout<<"Maximum length of Subarray with k sum is:"<<findCnt(nums,0);
+    cout<<"Maximum length of Subarray with k sum is:"<<findCnt(nums,8);
 }
