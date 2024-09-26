@@ -28,6 +28,19 @@ class Employee
     {
         return salary;
     }   
+
+    public void setDept(String dept)
+    {
+         this.dept=dept; 
+    }
+    public void setName(String name)
+    {
+        this.name=name;
+    }
+    public void setSalary(int salary)
+    {
+       this.salary=salary;
+    }   
     
 }
 class Stream2
@@ -81,14 +94,19 @@ class Stream2
     {
         Employee e1=new Employee("Vikram Ghadage","CSE",100);
         Employee e2=new Employee("Anand Gote","IT",97);
-        Employee e3=new Employee("Sanjay Mali","IT",101);
+        Employee e3=new Employee("Sanjay Mali","Electonics",101);
         Employee e4=new Employee("Shivam pawar","CSE",98);
         List<Employee> emp_list=new ArrayList();
         emp_list.add(e1);
         emp_list.add(e2);
         emp_list.add(e3);
         emp_list.add(e4);
-        //Collections.sort(emp_list);
+
+        emp_list.stream().map(s ->{
+            s.setSalary(s.getSalary()+(s.getSalary()*10/100));   // increased salary by 10%
+            return s;
+        }).collect(Collectors.toList());
+        emp_list.forEach(System.out::println);
         //emp_list=sortList(emp_list);
 
         // Sort List By using comparators
@@ -105,9 +123,9 @@ class Stream2
         
       // Map<String, List<Employee>> emp_map=groupByDept(emp_list);
    
-        //System.out.println(groupByDeptCnt(emp_list));
-        System.out.println(employeeWithHigestSalary(emp_list));
-        System.out.println(employeeWithLowestSalary(emp_list));
+         System.out.println(groupByDeptCnt(emp_list));
+        // System.out.println(employeeWithHigestSalary(emp_list));
+        // System.out.println(employeeWithLowestSalary(emp_list));
 
        // Employee with Highest Salary
     //    Optional<Employee> highest_salried_emp=emp_list.stream().findFirst();
