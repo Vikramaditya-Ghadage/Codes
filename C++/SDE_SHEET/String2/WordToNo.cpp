@@ -31,39 +31,36 @@ unordered_map<string, int> mp = {
         {"ninety", 90},
         {"hundred", 100},
         {"thousand", 1000},
-        {"million", 1000000},
-        {"billion", 1000000000},
+        {"lakh", 100000},
+        {"crore", 10000000},
 };
 
 int main() {
     
     int ans=0;
-    int currentNo=0;
-    vector<string> s={"thirty", "six", "thousand","four","hundred","forty","two"};
-    
-    for(int i=0;i<s.size();i++)
+    int no=0;
+    vector<string> words={"two", "lakh","twenty","two","thousand","four","hundred","forty","two"};
+    for(int i=0;i<words.size();i++)
     {
-       int no=mp.at(s[i]);
-       
-       if(no>=100)
-       {
-           currentNo*=no;
-       }
-       else
-       {
-           currentNo+=no;
-       }
-       
-       if(currentNo>=1000)
-       {
-           ans+=currentNo;
-           currentNo=0;
-       }
-       
-       
-       cout<<s[i]<<":"<<currentNo<<endl;
+        int currentNo=mp.at(words[i]);
+        
+        if(currentNo>=100)
+        {
+            no*=currentNo;
+        }
+        else
+        {
+            no+=currentNo;
+        }
+        
+        if(currentNo>=1000)
+        {
+            ans+=no;
+            no=0;
+        }
+        
+        // cout<<words[i]<<":"<<no<<"  "<<ans<<endl;
     }
-    ans+=currentNo;
+    ans+=no;
     cout<<ans;
-    return 0;
 }
