@@ -1,34 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
-static bool cmp(pair <int, char> a, pair <int, char> b){
-    if (a.first < b.first) return true;
-    else if(a.first > b.first) return false;
-    // else if(a.pos>b.pos) return true;
-    // return false;
+bool cmp(pair<char,int> first,pair<char,int> second)
+{
+    if(first.second>second.second || first.second==second.second) return true;
+    else return false;
 }
-
-string frequencySort(string s) {  
-
-    vector < pair <int, char> > v;
-    map <char, int> m;
-    for(int i = 0; i < s.size(); i++){
-        m[s[i]]++;
-    }
-    map <char, int> :: iterator i = m.begin();
-    while(i != m.end()){
-        v.push_back({i->second, i->first});
-        i++;
-    }
-    sort(v.rbegin(), v.rend(), cmp);
-    string ans = "";
-    for(int i = 0; i < v.size(); i++){
-        int t = v[i].first;
-        while(t--)
+string frequencySort(string str)
+{
+    string ans="";
+    unordered_map<char,int> mp;
+    vector<pair<char,int>> words;
+    
+    for(auto i:str)
+    mp[i]++;
+    
+    for(const auto& i:mp)
+    words.emplace_back(i.first,i.second);
+    
+    sort(words.begin(),words.end(),cmp);
+    
+    for(auto i:words)
+    {
+        int no=i.second;
+        while(no--)
         {
-            ans += v[i].second;
+            ans+=i.first;
         }
     }
-    return ans;    
+    return ans;
+    
 }
 
 // Time-Complixity: O(N) it's a Linear
@@ -63,10 +63,9 @@ string frequencySort2(string s) {
     return ans;
     
 }
-
 int main()
 {
-    string s="bbbaaddcczzz";
+    string s="abbcccdddde";
     string ans=frequencySort(s);
     //string ans=frequencySort2(s);
     cout<<ans; 
