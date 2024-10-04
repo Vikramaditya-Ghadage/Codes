@@ -68,9 +68,9 @@ class Stream2
     {
         Employee e1=new Employee("Vikram Ghadage","CSE",100);
         Employee e2=new Employee("Anand Gote","IT",97);
-        Employee e3=new Employee("Sanjay Mali","Electonics",91);
+        Employee e3=new Employee("Sanjay Mali","Electonics",81);
         Employee e4=new Employee("Shivam pawar","CSE",98);
-        Employee e5=new Employee("Nikhil Tarate","IT",95);
+        Employee e5=new Employee("Nikhil Tarate","IT",85);
         Employee e6=new Employee("Ramjan Shaikh","Electonics",90);
         List<Employee> emp_list=new ArrayList();
         emp_list.add(e1);
@@ -91,11 +91,12 @@ class Stream2
         emp_list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).forEach(System.out::println);
         //emp_list.stream().sorted((a1,a2) -> (a2.getSalary()-a1.getSalary())).forEach(System.out::println);
 
-         System.out.println("***********************  Employee with highest salary ***********************************");
+        System.out.println("***********************  Employee with highest salary ***********************************");
         System.out.println(emp_list.stream().max(Comparator.comparing(Employee::getSalary)).get());
         System.out.println(emp_list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).limit(1).collect(Collectors.toList()));
 
-
+        System.out.println("***********************  Employee with Sum of salries grater than 90 ***********************************");
+        System.out.println(emp_list.stream().filter(emp -> emp.getSalary() > 100).mapToInt(Employee::getSalary).sum());   
        
         //  System.out.println("***********************  Grouping By  ***********************************");
         // List<String> nm=filterFirstName(emp_list,"CSE");
@@ -106,6 +107,5 @@ class Stream2
         System.out.println(groupByDeptCnt(emp_list));
         System.out.println(groupByDeptAvgSalary(emp_list));
         System.out.println(groupByDeptMaxSalary(emp_list));
-
     }
 }
