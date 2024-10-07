@@ -11,34 +11,37 @@ struct TreeNode {
 
 void insert(int val)
 {
-    TreeNode *new_node=new TreeNode(val);
-    if(root==NULL)
+    TreeNode *new_node = new TreeNode(val);
+    
+    if (root == NULL)
     {
-        root=new_node;
+        root = new_node;
     }
     else
     {
-        temp=root;
-        while(temp!=NULL)
+        TreeNode *tmp = root;
+        
+        while (true) // Continue until a valid position is found
         {
-            if(val>temp->data)
+            if (val < tmp->data) 
             {
-                if(temp->right==NULL)
-                break;
-                temp=temp->right;
+                if (tmp->left == NULL) 
+                {
+                    tmp->left = new_node;
+                    break;
+                }
+                tmp = tmp->left;
             }
-            else
+            else 
             {
-                if(temp->left==NULL)
-                break;
-                temp=temp->left;
-
+                if (tmp->right == NULL)
+                {
+                    tmp->right = new_node;
+                    break;
+                }
+                tmp = tmp->right; 
             }
         }
-        if(val>temp->data)
-        temp->right=new_node;
-        else
-        temp->left=new_node;
     }
 }
 
