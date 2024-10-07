@@ -42,7 +42,7 @@ string convertToString(long no) {
     }
 
     // Adding "and" if necessary (when there is a remainder below 100 and it's not part of a "hundred")
-    if (no > 0 && ans.size() > 0) {
+    if (no) {
         ans += "and ";
     }
 
