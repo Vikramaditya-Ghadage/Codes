@@ -1,0 +1,22 @@
+{
+  "java.debug.settings.onBuildFailureProceed": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17",
+      "default": true
+    }
+  ],
+  "java.home": "C:\\Program Files\\Java\\jdk-17",
+
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && .\\$fileNameWithoutExt.exe",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe && .\\$fileNameWithoutExt.exe",
+    "python": "cd $dir && python $fileName"
+  },
+  "workbench.editor.autoLockGroups": {
+    "decompiled.javaClass": true
+  }
+}

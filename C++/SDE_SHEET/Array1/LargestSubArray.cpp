@@ -40,5 +40,5 @@ int main()
     vector<int> nums={-2, -3, 4, -1, -2, 1, 5, -3};
     // vector<int> nums={-2,1,-3,4,-1,2,1,-5,4};
     cout<<endl<<"Max is:"<<bruteForceMaxSum(nums,nums.size());
-    cout<<"Max is:"<<findMaxSum(nums,nums.size());
+    cout<<endl<<"Max is:"<<findMaxSum(nums,nums.size());
 }

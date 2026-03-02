@@ -1,0 +1,14 @@
+User(user):
+
+Address(address_id,country,state,district,complete_address,lattitude,gratitude);
+User(userid,name,mobile,email,address_id)
+
+
+Catagory(catagory_id,catagory_name,description)
+Product(product_id,catagory_id,product_name,product_description,price,maxThreshould)
+Inventory(inventory_id,product_id,quantity,address_id)
+
+Cart(cart_id,user_id,product_id,quantity,final_amount)
+Order(order_id,user_id,cart_id,final_amount,status)
+
+Payment(payment_id,user_id,order_id,payment_status,amount,payment_date)

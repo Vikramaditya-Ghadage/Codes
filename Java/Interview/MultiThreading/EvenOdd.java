@@ -84,19 +84,13 @@ public class EvenOdd {
 		EvenOdd mt = new EvenOdd();
 
 		// Create thread t1
-		Thread t1 = new Thread(new Runnable() {
-			public void run()
-			{
+		Thread t1 = new Thread(() -> {
 				mt.printEvenNumber();
-			}
 		});
 
 		// Create thread t2
-		Thread t2 = new Thread(new Runnable() {
-			public void run()
-			{
-				mt.printOddNumber();
-			}
+		Thread t2 = new Thread(()-> {
+		mt.printOddNumber();
 		});
 
 		// Start both threads

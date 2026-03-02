@@ -16,20 +16,20 @@
  double calPow(double no,int n)
  {
     double ans=1.0;
-    int n1=n;
-    if(n1<0) n1=n1*(-1);
+    int cnt=n;
+    if(cnt<0) cnt=cnt*(-1);
 
-    while(n1)
+    while(cnt)
     {
-        if(n1%2==0)
+        if(cnt%2==0)
         {
             no=no*no;
-            n1=n1/2;
+            cnt=cnt/2;
         }
         else
         {
             ans*=no;
-            n1--;
+            cnt--;
         }
     }
 
@@ -40,6 +40,6 @@
  }
  int main()
  {
-    cout<<calPowBruteForce(2,10)<<endl;
-    cout<<calPow(2,10)<<endl;
+    // cout<<calPowBruteForce(2,3)<<endl;
+    cout<<calPow(2,3)<<endl;
  }

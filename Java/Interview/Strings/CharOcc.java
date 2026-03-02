@@ -32,19 +32,13 @@ class CharOcc
         for(int i=0;i<str.length();i++)
         {
             char ch=str.charAt(i);
-            if(map.containsKey(ch))
-            {
-                int cnt=map.get(ch);
-                map.put(ch,++cnt);
-            }
-            else
-            {
-                map.put(ch,1);
-            }
-        }
+            map.put(ch,map.getOrDefault(ch,0)+1);
 
-        for(Map.Entry obj:map.entrySet())
-        System.out.println(obj.getKey()+":"+obj.getValue());
+        }
+        
+        map.forEach((key,value)->{
+            System.out.println(key+":"+value);
+        });
 
     }
 }

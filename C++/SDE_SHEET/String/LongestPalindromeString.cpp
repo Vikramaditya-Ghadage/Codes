@@ -20,7 +20,7 @@ string longestPalindrome(string str) {
 
 int main()
 {
-    string str="abcdca";
+    string str="abcdcmadama";
     cout<<longestPalindrome(str);
     return 0;
 }

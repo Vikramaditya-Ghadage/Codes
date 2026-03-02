@@ -1,5 +1,6 @@
  #include<bits/stdc++.h>
  using namespace std;
+ // Time-Complixity: O(N*log*N) it's Logartigm
  int findCntBruteForce(vector<int> nums)
  {
     sort(nums.begin(),nums.end());
@@ -55,8 +56,8 @@ int findConsecutiveCnt(vector<int> nums)
  }
  int main()
  {
-   // vector<int> nums={0,1,1,2,2,2,3,3,4};
-    vector<int> nums={100,4,200,1,3,2};
+   vector<int> nums={0,4,5,11,8};
+    // vector<int> nums={100,4,200,1,3,2};
     cout<<findCntBruteForce(nums)<<endl;
     cout<<findConsecutiveCnt(nums)<<endl;
  }

@@ -22,7 +22,7 @@ public class ListOperations {
         System.out.println("Min element:"+Collections.min(list));
         System.out.println("Max element:"+Collections.max(list));
         
-        System.out.println("Frequency of element:"+Collections.frequency(list, 10));
+        System.out.println("Frequency of element:"+Collections.frequency(list, 1));
         list.forEach(System.out::println);
         
     }

@@ -21,7 +21,9 @@ int waterTrappedBruteForce(vector<int> &nums)
             rightMax=max(rightMax,nums[j]);
             j++;
         }
+        cout<<"each:"<<min(leftMax,rightMax)-nums[i]<<endl;
         ans+=min(leftMax,rightMax)-nums[i];
+
     }
     return ans;
 }
@@ -56,7 +58,7 @@ int waterTrapped(vector<int> &nums)
 
 int main()
 {
-    vector<int> nums={0,1,0,2,1,0,1,3,2,1,2,1};
+    vector<int> nums={3, 0, 1, 0, 4, 0, 2};
     // vector<int> nums={4,2,0,3,2,5};
     cout<<"Water trapped:"<<waterTrappedBruteForce(nums)<<endl;
     cout<<"Water trapped:"<<waterTrapped(nums)<<endl;

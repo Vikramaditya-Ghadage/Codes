@@ -21,7 +21,7 @@ void sortArray(vector<int> &nums)
     }
 }
 
-// Time-Complixity: O(N) it's Linear
+// Time-Complixity: O(N*Log*N) it's Linear
 void sortArrayMinHeap(vector<int> &nums)
 {
     priority_queue<int,vector<int>,greater<int>> min_heap;

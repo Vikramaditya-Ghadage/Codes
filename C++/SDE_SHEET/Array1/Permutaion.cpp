@@ -30,7 +30,7 @@ void permutation2(vector<int> nums,vector<vector<int>> &ans)
 
 int main()
 {
-    vector<int> nums={1,2,3,4,5};
+    vector<int> nums={1,2,3,4};
     vector<int> temp=nums;
     vector<vector<int>> ans;
     int index=0;

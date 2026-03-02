@@ -3,9 +3,9 @@ class DuplicateChar
 {
     public static void main(String args[])
     {
-        String str="abcddabceefddxcvbnnnvcxdgttgfd";
+        String str="vvaadddaaaabbbbbccccc";
         String str2="";
-        HashSet<Character> s1=new HashSet<Character>();
+        HashSet<Character> s1=new LinkedHashSet<Character>();
         for(int i=0;i<str.length();i++)
         {
             char ch=str.charAt(i);

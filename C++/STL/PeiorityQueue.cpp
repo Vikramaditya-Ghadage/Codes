@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    priority_queue<int> pqt; // Time complixity in O(1) in case of Search and O(log n) in case of insertion,updation and deltion) it use BST
+    priority_queue<int> pqt; // Time complixity in O(1) in case of peek(),Top() and O(log n) in case of insertion,updation and deltion) it use BST
     for(int i=1;i<=5;i++) 
     pqt.push(i);
 

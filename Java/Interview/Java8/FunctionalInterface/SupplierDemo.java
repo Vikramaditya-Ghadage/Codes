@@ -4,7 +4,7 @@ class SupplierDemo
 {
     public static void main(String args[])
     {
-        Supplier<Double> random_no= () -> Math.random();
+        Supplier<Double> random_no= () -> Math.random()*100;
         System.out.println(random_no.get());
     }
 }
