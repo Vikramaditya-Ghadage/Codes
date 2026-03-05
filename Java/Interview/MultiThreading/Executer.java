@@ -52,8 +52,8 @@ public class Executer {
             }
         };
 
-        executer.submit(oddTask);
-        executer.submit(eventask);
+        executer.execute(oddTask);
+        executer.execute(eventask);
 
         executer.shutdown();
 

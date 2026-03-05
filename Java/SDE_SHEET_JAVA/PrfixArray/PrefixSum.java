@@ -22,9 +22,6 @@ public class PrefixSum {
             prefixSums[i] = currentSum;
         }
 
-        for (int no : prefixSums) {
-            System.out.print(no+" ");
-        }
         System.out.println();
 
         System.out.println(rangeSum(0,2));

@@ -1,3 +1,5 @@
+package Interview.Collections.Map;
+
 import java.util.*;
 public class MapExample1
 {

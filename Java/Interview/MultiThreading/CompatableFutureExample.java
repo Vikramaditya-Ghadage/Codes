@@ -52,8 +52,8 @@ public class CompatableFutureExample {
     public static void errorhandling()
     {
         CompletableFuture<Integer> task1=CompletableFuture.supplyAsync(() -> 10/0)
-                        .exceptionally(ek ->{ 
-                            System.out.println("Divide by zero");
+                        .exceptionally((ex) ->{ 
+                            System.out.println("Exception Occured:"+ex.getMessage());
                             return 0;
                         });
         System.out.println(task1.join());

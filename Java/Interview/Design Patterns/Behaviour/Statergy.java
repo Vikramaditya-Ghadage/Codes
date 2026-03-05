@@ -61,7 +61,6 @@ class PaymentFactory  // Factory
 }
 
 
- 
 public class Statergy {
     public static void main(String[] args) {
 

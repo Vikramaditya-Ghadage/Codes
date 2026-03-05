@@ -38,8 +38,7 @@ public class CountOneAndZero {
             }
             else
             {
-                if(cnt>maxLen)
-                    maxLen=cnt;
+                maxLen=Math.max(maxLen,cnt);
                 cnt=1;
             }
         }

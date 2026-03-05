@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-class Stream4 {
+public class StreamMethodRefernces {
     public static void main(String args[]) {
         List<String> no = Arrays.asList("101", "Vikramaditya", "null", "100", "99");
 
         int sum = no.stream()
-            .map(Stream4::parseInteger)
+            .map(StreamMethodRefernces::parseInteger)
             .filter(Optional::isPresent)
             .map(Optional::get)
             .filter(i -> i % 2 == 1)  // Odd numbers

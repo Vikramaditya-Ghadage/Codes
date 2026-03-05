@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class SubArrayMaxSum {
+public class MaxSumSubArrayWithKSize {
     public static void main(String[] args) {
         List<Integer> nums=Arrays.asList(1,9,5,4,8,7,6);
         HashMap<Integer,Integer> map=new HashMap<>();

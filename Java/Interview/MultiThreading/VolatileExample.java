@@ -16,6 +16,7 @@ class Printer
         {
             // Reader will stuck in loop here but if we use volatile here
             // reader thread immediatly get latest flag=true after changed by writer
+            System.out.println("Infininate Loop till flag:True");
         }
         System.out.println("Flag is now set to:"+flag);
     }
