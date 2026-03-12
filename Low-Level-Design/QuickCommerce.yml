@@ -7,7 +7,10 @@ Catagory(catagory_id,catagory_name,description)
 Product(product_id,catagory_id,product_name,product_description,price,maxThreshould)
 Inventory(inventory_id,product_id,quantity,address_id)
 
-Cart(cart_id,user_id,product_id,quantity,final_amount)
+Cart(cart_id, user_id, final_amount)   // In fronrend will store in cache
+CartItem(cart_item_id, cart_id, product_id, quantity, price)
+
 Order(order_id,user_id,cart_id,final_amount,status)
 
 Payment(payment_id,user_id,order_id,payment_status,amount,payment_date)
+

@@ -1,4 +1,4 @@
-package Interview.Collections.Map;
+package Interview.Interview_Codes;
 
 import java.util.*;
 import java.util.stream.Collectors;

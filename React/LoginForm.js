@@ -17,6 +17,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent form reload
     // Basic mock authentication logic
+    console.log(email);
     if (email === mockUser.email && password === mockUser.password) {
       setIsLoggedIn(true); // Set the login status
       setError(''); // Clear error

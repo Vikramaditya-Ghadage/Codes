@@ -1,6 +1,6 @@
-package SDE_SHEET_JAVA.SlidingWindow;
+package fixed;
 
-public class CountOneAndZero {
+public class StringFrequency {
     public static String performCount(String str)
     {
         StringBuilder ans=new StringBuilder();

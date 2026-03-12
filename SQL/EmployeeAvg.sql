@@ -1,5 +1,5 @@
 -- Employees whos salary is greater than there department avg salary insigle table
-SELECT name,salary from
+SELECT name,salary,department_name from
 (
     select name,salary,department_name,
     avg(salary) OVER(PARTITION by department_name) as avg_salary_per_department
